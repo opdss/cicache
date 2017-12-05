@@ -1,0 +1,25 @@
+{
+    "name": "opdss/cicache",
+    "description": " a php cache library",
+    "type"       : "library",
+    "keywords"   : ["CodeIgniter", "cache"],
+    "homepage"   : "http://php.istimer.com/",
+    "license"    : "MIT",
+    "authors"    : [
+        {
+            "name": "opdss",
+            "email": "opdss@qq.com",
+            "homepage": "http://www.istimer.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Opdss\\Cicache\\": "./"
+        }
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "predis/predis": "*"
+    }
+}
+
