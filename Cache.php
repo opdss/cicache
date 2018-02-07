@@ -1,32 +1,32 @@
 <?php
 /**
- * MemcachedHandler.php for cicache.
+ * Cache.php for cicache.
  * @author SamWu
  * @date 2017/12/5 15:47
  * @copyright istimer.com
  */
-
-
 namespace Opdss\Cicache;
 
 /**
  * Class Cache
- *
  * A factory for loading the desired
- *
- * @package CodeIgniter\Cache
+ * @package Opdss\Cicache
  */
 class Cache
 {
+
+	/**
+	 * 默认的驱动
+	 * @var string
+	 */
 	private static $defaultHandler = 'dummy';
+
 	/**
 	 * Attempts to create the desired cache handler, based upon the
-	 *
-	 * @param        $config
-	 * @param string $handler
-	 * @param string $backup
-	 *
-	 * @return CacheInterface
+	 * @param $config
+	 * @param null $handler
+	 * @param null $backup
+	 * @return mixed
 	 */
 	public static function factory($config, $handler = null, $backup = null)
 	{
@@ -68,6 +68,4 @@ class Cache
 		}
 		return $handler;
 	}
-
-	//--------------------------------------------------------------------
 }

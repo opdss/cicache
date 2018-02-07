@@ -5,7 +5,6 @@
  * @date 2017/12/5 15:47
  * @copyright istimer.com
  */
-
 namespace Opdss\Cicache\Handlers;
 
 use Opdss\Cicache\CacheInterface;
@@ -31,9 +30,8 @@ class FileHandler implements CacheInterface
 
 	public function __construct($config)
 	{
-		$this->prefix = $config['prefix'] ?: '';
+		$this->prefix = isset($config['prefix']) ? $config['prefix'] : '';
 		$this->path = !empty($config['path']) ? $config['path'] : '/tmp';
-
 		$this->path = rtrim($this->path, '/\\') . DIRECTORY_SEPARATOR;
 	}
 

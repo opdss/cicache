@@ -5,7 +5,6 @@
  * @date 2017/12/5 15:47
  * @copyright istimer.com
  */
-
 namespace Opdss\Cicache\Handlers;
 
 use Opdss\Cicache\CacheInterface;
@@ -45,7 +44,7 @@ class PredisHandler implements CacheInterface
 
 	public function __construct($config)
 	{
-		$this->prefix = $config['prefix'] ?: '';
+		$this->prefix = isset($config['prefix']) ? $config['prefix'] : '';
 
 		if (isset($config['redis'])) {
 			$this->config = array_merge($this->config, $config['redis']);

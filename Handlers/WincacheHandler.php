@@ -22,9 +22,9 @@ class WincacheHandler implements CacheInterface
 
 	//--------------------------------------------------------------------
 
-	public function __construct($config)
+	public function __construct(array $config)
 	{
-		$this->prefix = $config->prefix ?: '';
+		$this->prefix = isset($config['prefix']) ? $config['prefix'] : '';
 	}
 
 	//--------------------------------------------------------------------

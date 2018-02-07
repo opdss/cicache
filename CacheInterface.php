@@ -1,12 +1,10 @@
 <?php
 /**
- * MemcachedHandler.php for cicache.
+ * CacheInterface.php for cicache.
  * @author SamWu
  * @date 2017/12/5 15:47
  * @copyright istimer.com
  */
-
-
 namespace Opdss\Cicache;
 
 interface CacheInterface
